@@ -1,0 +1,147 @@
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 5% auto auto 10%;
+    grid-template-areas: "n n n n n n n n n" "m m m m m m m m m" "r r r r r r r r r" "f f f f f f f f f"
+}
+
+h3 {
+    margin: 0px;
+}
+
+nav {
+    grid-area: n;
+}
+
+.main {
+    grid-area: m;
+}
+
+.sobe {
+    grid-area: r;
+}
+
+
+/*Stilizovanje videa sa pocetne stranice*/
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.home-bg-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .home-bg-video {
+        width: 100%;
+        height: auto;
+        
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .home-bg-video {
+        width: auto;
+        height: 100%;
+        
+    }
+}
+
+.home-cover {
+    padding: 0 5% 0 5%;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.home-cover div {
+    justify-content: center;
+}
+
+.home-cover h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.home-cover img {
+    width: 200px;
+    height: 200px;
+    
+}
+
+.home-cover p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 8px 0 30px 0;
+
+}
+
+.home-btn {
+    margin-top: 100px;
+}
+
+.btn-general {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 28px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 12px 46px 12px 46px;
+    transition: all 0.4s;
+    background-color: #91d0aa;
+    color: white;
+}
+
+.sobe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #91d0aa;
+}
+
+.sobe div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.sobe div img{
+    width: 300px;
+    height: 300px;
+}
+
+footer {
+    grid-area: f;
+}
+
+@media screen and (min-width: 769px) {
+    .home-cover {
+        margin-left: 10%;
+    }
+    .main {
+        justify-content: flex-start;
+    }
+    .sobe {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {}
+
+@media only screen and (max-device-width: 480px) {}
