@@ -58,7 +58,7 @@ nav {
 }
 
 .home-cover {
-    padding: 0 5% 0 5%;
+    padding: 10% 10% 0 10%;
     background-color: rgb(0, 0, 0, 0.3);
     color: #fff;
     display: flex;
@@ -151,9 +151,7 @@ footer {
         grid-template-rows: 5% 100vh 70vh 30%;
      
     }
-    .home-cover {
-        margin-left: 10%;
-    }
+    
     .main {
         justify-content: flex-start;
     }
