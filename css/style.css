@@ -5,29 +5,26 @@ body {
     color: #fff;
 }
 
-footer{
+.container-fluid {
     background-color: #1f2421;
-    color: #fff;
 }
-.container-fluid{
-background-color: #1f2421;
-}
-.navbar{
+
+.navbar {
     border: none;
-
 }
 
-.navbar-default .navbar-nav>li>a{ 
-    color:#edc649;
+.navbar-default .navbar-nav>li>a {
+    color: #edc649;
     font-weight: 700;
     padding-bottom: 0;
     position: relative;
 }
-.navbar-default .navbar-nav>li>a:hover{ 
-    color: #f46036;
-     }
 
-.navbar-default .navbar-nav>li>a:after{
+.navbar-default .navbar-nav>li>a:hover {
+    color: #f46036;
+}
+
+.navbar-default .navbar-nav>li>a:after {
     content: "";
     width: 0%;
     height: 2px;
@@ -35,33 +32,93 @@ background-color: #1f2421;
     position: absolute;
     bottom: 0%;
     left: 50%;
-    
     transition: all 1000ms ease;
 }
 
-.navbar-default .navbar-nav>li>a:hover:after{
+.navbar-default .navbar-nav>li>a:hover:after {
     left: 0%;
     width: 100%;
+}
 
+footer {
+    background-color: #1f2421;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-box-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-footer {
+    width: 100px;
+    height: 100px;
+}
+
+.ikonice {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.ikonica-f {
+    width: 35px;
+    height: 35px;
+}
+
+.ikonica-i {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-box-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 769px) {
-    /* .navbar{
-        margin: 0;
-        
-    } */
     .navbar-default {
         background-color: #1f2421;
-         }
-    /* .navbar-default .navbar-nav>li>a{ 
-        padding: 0;
-    } */
-  
-
+    }
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 10%;
+    }
+    .footer-box-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-footer {
+        width: 100px;
+        height: 100px;
+    }
+    .ikonice {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+    }
+    .ikonica-f {
+        width: 35px;
+        height: 35px;
+    }
+    .ikonica-i {
+        width: 50px;
+        height: 50px;
+    }
+    .footer-box-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-
-
-
-
-
