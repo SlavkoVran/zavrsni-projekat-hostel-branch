@@ -53,12 +53,14 @@
 
  <div class="rezervacija-container" >
 <h1>Unesite podatke za rezervaciju</h1>
+
 <form action="" method="get" class="forma-korisnik">
-            <input type="text" placeholder="Unesite vaše ime i prezime">
-            <p> poruk validacija</p>
-            <input type="text" placeholder="Unesite vaš broj telefona">
-            <p> poruka validacija</p>
+            <input type="text" placeholder="Unesite vaše ime i prezime" id="ime">
+            <p class="poruka-ime" ></p>
+            <input type="text" placeholder="Unesite vaš broj telefona" id="telefon" >
+            <p class="poruka-telefon" > poruka validacija</p>
             <input type="email" name="" id="email" placeholder="Unesite vaš e-mail">
+            <p class="poruka-email">poruka o validaciji </p>
 </form>
 
 <form action="" method="get" class="forma-rezervacija-datuma">
@@ -105,7 +107,7 @@
 
      </form>
             
-     <input type="button" value="POŠALJITE REZERVACIJU">
+     <button type="button" id="btnSnimi" name="button" class="btn btn-lg btn-success" disabled>SNIMITE REZERVACIJU</button>
         </div>
 
         <div class="levo-container">
@@ -148,6 +150,9 @@
         </footer>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
 <script src="./js/rezervacija.js"></script>
 </body>
 
