@@ -52,62 +52,85 @@
         </div>
 
  <div class="rezervacija-container" >
-<h1>Unesite podatke za rezervaciju</h1>
+<h1>Unesite licne podatke za rezervaciju</h1>
 
 <form action="" method="get" class="forma-korisnik">
             <input type="text" placeholder="Unesite vaše ime i prezime" id="ime">
             <p class="poruka-ime" ></p>
             <input type="text" placeholder="Unesite vaš broj telefona" id="telefon" >
-            <p class="poruka-telefon" > poruka validacija</p>
+            <p class="poruka-telefon" ></p>
             <input type="email" name="" id="email" placeholder="Unesite vaš e-mail">
-            <p class="poruka-email">poruka o validaciji </p>
-</form>
-
-<form action="" method="get" class="forma-rezervacija-datuma">
-<div>
-        <span>Datum dolaska:</span>
-        <input type="date" name="" id="" class="izaberi-datum" placeholder="Izaberite početni datum">
-        
-</div>
-    
-<div>
-        
-        <span>Datum odlaska:</span>
-        <input type="date" name="" id="" class="izaberi-datum" placeholder="Izaberite krajnji datum">
-</div>
-        
+            <p class="poruka-email"></p>
+            <button type="button" id="btnDalje1" name="button" class="btn btn-lg btn-success" disabled>DALJE</button>
 </form>
 
 
+<!-- modal datum-->
+
+<div class="modal-datum">
+        <form action="" method="get" class="rezervacija-datuma-container">
+            <h2>Izaberite datume</h2>
+                <div class="forma-rezervacija-datuma">
+                        <div>
+                                <span>Datum dolaska:</span>
+                                <input type="date" name="" id="datumDolaska" class="izaberi-datum" placeholder="Izaberite početni datum">
+                                
+                        </div>
+                            
+                        <div>
+                                
+                                <span>Datum odlaska:</span>
+                                <input type="date" name="" id="datumOdlaska" class="izaberi-datum" placeholder="Izaberite krajnji datum">
+                        </div>
+                        <p class="poruka-datum"></p>
+            
+                </div>
+
+
+                <div>
+                        <button type="button" id="btnNazad2" name="button" class="btn btn-lg btn-success" >NAZAD</button>
+                        <button type="button" id="btnDalje2" name="button" class="btn btn-lg btn-success" >DALJE</button>
+                </div>
+                
+           
+                        
+                </form>
+</div>
+
+<!-- modal izbor sobe -->
+
         
+<div class="modal-soba"> 
+
+
      <form action="" method="get" class="forma-soba">
 
-         <h2>Izaberite sobu</h2>
-         <input type="text" placeholder="Unesite broj osoba">
-
+            <h2>Izaberite sobu</h2>
          <div class="soba-container">
+             
          <div class="soba-izbor">
                 <p>Soba"A" sa 2 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="">
+                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa dva kreveta" class="img-hover">
          </div>
          <div class="soba-izbor">
              <p>Soba"B" sa 4 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="">
+                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa četiri kreveta"class="img-hover">
          </div>
          <div class="soba-izbor">
                 <p>Soba"C" sa 4 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="">
+                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa četiri kreveta"class="img-hover">
          </div>
          <div class="soba-izbor">
                 <p>Soba"D" sa 8 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="">
+                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa osam kreveta"class="img-hover">
          </div>
 
         </div>
 
      </form>
+    </div>
             
-     <button type="button" id="btnSnimi" name="button" class="btn btn-lg btn-success" disabled>SNIMITE REZERVACIJU</button>
+     
         </div>
 
         <div class="levo-container">
@@ -154,6 +177,7 @@
   integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
   crossorigin="anonymous"></script>
 <script src="./js/rezervacija.js"></script>
+<script src="./js/rezervacija-modal.js"></script>
 </body>
 
 </html>

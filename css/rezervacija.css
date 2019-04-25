@@ -1,42 +1,41 @@
 /* Gridovanje stranice rezervacije */
-body{
+
+body {
     color: #1f2421;
 }
+
 .main-container {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 5% auto 20%;
-    grid-template-areas: 
-    "n n n n n n n n n"
-    "r r r r r r r r r"
-    "r r r r r r r r r"
-    "f f f f f f f f f"
+    grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "r r r r r r r r r" "f f f f f f f f f"
 }
 
 nav {
     grid-area: n;
 }
-.desno-container{
+
+.desno-container {
     grid-area: d;
     background-color: #ddd;
-
 }
 
-.rezervacija-container{
+.rezervacija-container {
+    position: relative;
     grid-area: r;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10% 3% 10% 3%;
-    
+    background: violet;
 }
 
-.rezervacija-container h1{
+.rezervacija-container h1 {
     width: 80%;
     margin: 0px 0px 20px 0px;
-    padding: 2px 0px 2px 0px ;
+    padding: 2px 0px 2px 0px;
     font-size: 2rem;
     background-color: #1f242177;
     color: #fff;
@@ -46,48 +45,99 @@ nav {
     border-top-right-radius: 150px;
 }
 
-form{
+form {
     margin-bottom: 5%;
-    
-   
 }
-.forma-container{
+
+.forma-container {
     display: flex;
 }
 
-.forma-korisnik{
+.forma-korisnik {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
 }
 
-.forma-korisnik input{
+.forma-korisnik input {
     height: 50px;
     width: 80%;
     margin-bottom: 10px;
     background: #1f2421;
     z-index: 1;
     color: #fff;
-    
-    
 }
 
-.forma-rezervacija-datuma{
+/* Stilizovanje poruka o validaciji */
+
+.poruka-ime, .poruka-telefon, .poruka-email {
+    color: red;
+    display: none;
+}
+
+.poruka-brojKreveta {
+    display: none;
+}
+
+.poruka-izbor-soba {
+    display: none;
+}
+
+/* Uklanjam dugmice za izbora datuma */
+
+.izaberi-datum::-webkit-inner-spin-button, .izaberi-datum::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Modal datuma*/
+
+.modal-datum {
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    display: none;
+}
+
+.rezervacija-datuma-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    background: white;
+    box-shadow: -5px 5px 10px #DCE1DE;
+    border-radius: 10px;
+}
+
+.rezervacija-datuma-container h2 {
+    margin-top: 15%;
+    ;
+}
+
+.forma-rezervacija-datuma {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.forma-rezervacija-datuma div{
+.forma-rezervacija-datuma div {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding-top: 10%;
 }
 
-.forma-rezervacija-datuma input{
+.forma-rezervacija-datuma input {
     height: 50px;
     width: 100%;
     margin-bottom: 10px;
@@ -96,31 +146,39 @@ form{
     color: #fff;
 }
 
-/* Uklanjam dugmice sa iybora datuma */
-.izaberi-datum::-webkit-inner-spin-button,
-.izaberi-datum::-webkit-outer-spin-button
-{
--webkit-appearance: none;
-margin: 0;
-}
-
 /* Responsive prikaz za odabir slika uz pomoc flex-wrap, min-width*/
 
-.forma-soba{
+/* modal sobe */
+
+.modal-soba {
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    display: none;
+}
+
+.forma-soba {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid green;
+    height: 100%;
 }
 
-.soba-container{
+.soba-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.soba-izbor{
+.soba-izbor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,49 +187,66 @@ margin: 0;
     margin-bottom: 2%;
 }
 
-.soba-izbor img{
-    width: 100%;   
+.soba-izbor img {
+    width: 100%;
+    cursor: pointer;
 }
 
-.levo-container{
+.img-hover {
+    background-color: #1f2421;
+    opacity: 0.5;
+    transition: 0.7s ease;
+}
+
+.img-hover:hover {
+    opacity: 1;
+    transition: 0.7s ease;
+}
+
+.levo-container {
     grid-area: l;
-    background-color:#ddd;
+    background-color: #ddd;
 }
 
-footer{
+footer {
     grid-area: f;
 }
-
 
 /* login forma */
 
 @media screen and (min-width: 769px) {
-
     .main-container {
         width: 100%;
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: 5% auto auto 20%;
-        grid-template-areas: 
-        "n n n n n n n n n"
-        "d d r r r r r l l"
-        "d d r r r r r l l"
-        "f f f f f f f f f"
+        grid-template-areas: "n n n n n n n n n" "d d r r r r r l l" "d d r r r r r l l" "f f f f f f f f f"
     }
-   .soba-container{
-       flex-direction: row;
-       justify-content: center;
-   }
-/* Responsive prikaz za odabir slika uz pomoc flex-wrap, min-width*/
-   .soba-izbor{
-    min-width: 45%;
-    width: 45%;
-    height: 45%;
-    margin-right: 1%;
-    margin-left: 1%;
+    .soba-container {
+        flex-direction: row;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+        
+        box-shadow: -5px 5px 10px #DCE1DE;
+        border-radius: 10px;
+    }
+    .forma-soba {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid green;
+        height: 100%;
+        background: white;
+        padding-top: 2%;
+    }
+    /* Responsive prikaz za odabir slika uz pomoc flex-wrap, min-width*/
+    .soba-izbor {
+        min-width: 45%;
+        width: 45%;
+        height: 45%;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
 }
-
-}
-
-

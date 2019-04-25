@@ -2,20 +2,20 @@
 var formValidacija = {
     ime: false,
     email: false,
-    telefon: false
+    telefon: false,
 };
 
 // funkcija koja proverava da li su svi uslovi validirani odnosno
-//  da li je forma ispravno popunjena
+//  da li je forma ispravno popunjena i prikaz poruke 
+//o gresci ukoliko nije dobro popunjeno 
 function proveriValidaciju(){
 if (formValidacija.ime && formValidacija.email  && formValidacija.telefon){
-    $('#btnSnimi').removeAttr('disabled');
+    $('#btnDalje1').removeAttr('disabled');
 }
 else {
-    $('#btnSnimi').attr('disabled', true);
+    $('#btnDalje1').attr('disabled', true);
 }
 };
-
 
 // provera validnosti input polja #ime
 $('#ime').on('input', function(){
@@ -139,3 +139,6 @@ $('#telefon').on('input', function(){
         }
     }
     });
+
+
+   
