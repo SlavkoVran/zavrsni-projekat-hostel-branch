@@ -62,8 +62,9 @@
 
         <div class="rezervacija-container">
 
-            <div class="modal-korisnik flex-column">
-                <form action="" method="get" class="forma-korisnik flex-column">
+            <div class="modal-korisnik">
+                <form action="" method="get" class="forma-korisnik">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
                     <h3>Unesite licne podatke za rezervaciju</h3>
                     <input class="input-polje" type="text" placeholder="Unesite vaše ime i prezime" id="ime">
                     <p class="poruka-ime"></p>
@@ -78,16 +79,17 @@
 
 
             <div class="modal-datum flex-column">
-                <form action="" method="get" class="rezervacija-datuma-container flex-column">
+                <form action="" method="get" class="rezervacija-datuma-container">
+                        <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
                     <h3>Izaberite datume</h3>
                     <div class="forma-rezervacija-datuma">
                         <div>
-                            <span>Datum dolaska:</span>
+                            <span>Datum prijave:</span>
                             <input type="date" name="" id="datumDolaska" class="izaberi-datum"
                                 placeholder="Izaberite početni datum">
                         </div>
                         <div>
-                            <span>Datum odlaska:</span>
+                            <span>Datum odjave:</span>
                             <input type="date" name="" id="datumOdlaska" class="izaberi-datum"
                                 placeholder="Izaberite krajnji datum">
                         </div>
@@ -101,6 +103,7 @@
             </div>
 
             <div class="modal-soba flex-column">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
                 <h3>Izaberite sobu</h3>
                 <div class="slike-sobe-izbor">
 
@@ -148,8 +151,10 @@
                                         <p>Dva kreveta</p>
                                     </div>
                                 </div>
+                                
                     </div>
 
+                    
                     <!-- <div class="slika-sa-naslovom">
                         <img src="./img/4kreveta2.jpg" alt="">
                     </div>
@@ -164,6 +169,9 @@
 
 
                 </div>
+                <button type="button" id="btnDalje1" name="button" class="btn btn-lg btn-success"
+                        >POŠALJI REZERVACIJU</button>
+
             </div>
 
 
