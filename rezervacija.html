@@ -64,7 +64,8 @@
 
             <div class="modal-korisnik">
                 <form action="" method="get" class="forma-korisnik">
-                    <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png"
+                        alt="Eko Hostel Branch Arandjelovac">
                     <h3>Unesite licne podatke za rezervaciju</h3>
                     <input class="input-polje" type="text" placeholder="Unesite vaše ime i prezime" id="ime">
                     <p class="poruka-ime"></p>
@@ -72,105 +73,172 @@
                     <p class="poruka-telefon"></p>
                     <input type="email" name="" id="email" placeholder="Unesite vaš e-mail">
                     <p class="poruka-email"></p>
-                    <button type="button" id="btnDalje1" name="button" class="btn btn-lg btn-success"
-                        disabled>DALJE</button>
+                    <button type="button" id="btnDaljeKorisnik" name="button"
+                        class="btn btn-lg btn-success">NASTAVI</button>
                 </form>
             </div>
 
 
             <div class="modal-datum flex-column">
                 <form action="" method="get" class="rezervacija-datuma-container">
-                        <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png"
+                        alt="Eko Hostel Branch Arandjelovac">
                     <h3>Izaberite datume</h3>
                     <div class="forma-rezervacija-datuma">
                         <div>
                             <span>Datum prijave:</span>
-                            <input type="date" name="" id="datumDolaska" class="izaberi-datum"
+                            <input type="date" name="" id="datumPrijave" class="izaberi-datum"
                                 placeholder="Izaberite početni datum">
                         </div>
                         <div>
                             <span>Datum odjave:</span>
-                            <input type="date" name="" id="datumOdlaska" class="izaberi-datum"
+                            <input type="date" name="" id="datumOdjave" class="izaberi-datum"
                                 placeholder="Izaberite krajnji datum">
                         </div>
                         <p class="poruka-datum"></p>
                     </div>
                     <div>
-                        <button type="button" id="btnNazad2" name="button" class="btn btn-lg btn-success">NAZAD</button>
-                        <button type="button" id="btnDalje2" name="button" class="btn btn-lg btn-success">DALJE</button>
+                        <button type="button" id="btnNazadDatum" name="button"
+                            class="btn btn-lg btn-success">NAZAD</button>
+                        <button type="button" id="btnDaljeDatum" name="button"
+                            class="btn btn-lg btn-success">NASTAVI</button>
                     </div>
                 </form>
             </div>
 
             <div class="modal-soba flex-column">
-                    <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
+                <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
                 <h3>Izaberite sobu</h3>
                 <div class="slike-sobe-izbor">
 
-                    <div class="slika-box">
+                    <div class="slika-box" id="sobaA">
                         <div class="slika-sa-naslovom">
                             <img src="./img/8kreveta.jpg" alt="">
                         </div>
                         <div class="datails">
-                            <div class="content" >
+                            <div class="content">
                                 <h2>Soba "A"</h2>
-                                <p>Dva kreveta</p>
+                                <p>Soba raspolaže sa kreveta po ceni od 1.800,00 dinara po krevetu.</p>
+                                <select name="SobaC" id="brojKrevetaA">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option disabled selected>Izabrite broj kreveta...</option>
+                                </select>
                             </div>
                         </div>
                     </div>
 
-                    <div class="slika-box">
-                            <div class="slika-sa-naslovom">
-                                    <img src="./img/8kreveta.jpg" alt="">
-                                </div>
-                                <div class="datails">
-                                    <div class="content" >
-                                        <h2>Soba "A"</h2>
-                                        <p>Dva kreveta</p>
-                                    </div>
-                                </div>
+                    <div class="slika-box" id="sobaB">
+                        <div class="slika-sa-naslovom">
+                            <img src="./img/8kreveta.jpg" alt="">
+                        </div>
+                        <div class="datails">
+                            <div class="content">
+                                <h2>Soba "B"</h2>
+
+                                <p>Soba raspolaže sa 4 kreveta po ceni od 1.400,00 dinara po krevetu.</p>
+
+                                <select name="SobaB" id="brojKrevetaB">
+
+                                    <option value="1">SobaB 1</option>
+                                    <option value="2">SobaB 2</option>
+                                    <option value="3">SobaB 3</option>
+                                    <option value="4">SobaB 4</option>
+
+                                    <option disabled selected>Izabrite broj kreveta...</option>
+
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="slika-box">
-                            <div class="slika-sa-naslovom">
-                                    <img src="./img/8kreveta.jpg" alt="">
-                                </div>
-                                <div class="datails">
-                                    <div class="content" >
-                                        <h2>Soba "A"</h2>
-                                        <p>Dva kreveta</p>
-                                    </div>
-                                </div>
+                    <div class="slika-box" id="sobaC">
+                        <div class="slika-sa-naslovom">
+                            <img src="./img/8kreveta.jpg" alt="">
+                        </div>
+                        <div class="datails">
+                            <div class="content">
+                                <h2>Soba "C"</h2>
+
+                                <p>Soba raspolaže sa 4 kreveta po ceni od 1.400,00 dinara po krevetu.</p>
+
+                                <select name="SobaC" id="brojKrevetaC">
+
+                                    <option value="1">SobaC 1</option>
+                                    <option value="2">SobaC 2</option>
+                                    <option value="3">SobaC 3</option>
+                                    <option value="4">SobaC 4</option>
+
+                                    <option disabled selected>Izabrite broj kreveta...</option>
+
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="slika-box">
-                            <div class="slika-sa-naslovom">
-                                    <img src="./img/8kreveta.jpg" alt="">
-                                </div>
-                                <div class="datails">
-                                    <div class="content" >
-                                        <h2>Soba "A"</h2>
-                                        <p>Dva kreveta</p>
-                                    </div>
-                                </div>
-                                
+                    <div class="slika-box" id="sobaD">
+                        <div class="slika-sa-naslovom">
+                            <img src="./img/8kreveta.jpg" alt="">
+                        </div>
+                        <div class="datails">
+                            <div class="content">
+                                <h2>Soba "D"</h2>
+                                <p>Soba raspolaže sa 8 kreveta po ceni od 1.000,00 dinara po krevetu.</p>
+
+                                <select name="SobaD" id="brojKrevetaD">
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option disabled selected>Izabrite broj kreveta...</option>
+
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
 
-                    
-                    <!-- <div class="slika-sa-naslovom">
-                        <img src="./img/4kreveta2.jpg" alt="">
-                    </div>
 
-                    <div class="slika-sa-naslovom">
-                        <img src="./img/slavko1.jpg" alt="">
-                    </div>
 
-                    <div class="slika-sa-naslovom">
-                        <img src="./img/slavko1.jpg" alt="">
-                    </div> -->
 
 
                 </div>
-                <button type="button" id="btnDalje1" name="button" class="btn btn-lg btn-success"
-                        >POŠALJI REZERVACIJU</button>
+                <button type="button" id="btnNazadRezervacija" name="button"
+                    class="btn btn-lg btn-success">NAZAD</button>
+                    <!-- <button type="button" id="btnSnimi" name="button" class="btn btn-lg btn-success">SNIMI REZERVACIJU</button> -->
+                    <input type="submit" value="PRIKAZI" id="btnPrikaziRezervaciju" class="btn btn-lg btn-success">
+                <!-- <button type="button" id="btnPrikaziRezervaciju" name="button" class="btn btn-lg btn-success" disabled>PIKAZI
+                    REZERVACIJU</button> -->
+
+            </div>
+
+            <div class="ispis-rezervacije">
+                <div id="ispis">
+                    <table class="table table-dark">
+                            <thead>
+                                    <tr>
+                                        <th>Kupac</th>
+                                        <th>Telefon</th>
+                                        <th>email</th>
+                                        <th>Datum prijave</th>
+                                        <th>Datum Odjave</th>
+                                        <th>Broj Kreveta</th>
+                                    </tr>
+                                    <tbody id="rezervacija-lista"></tbody>
+                                </thead>
+                    </table>
+                    
+                </div>
+
+                <div class="btn-potvrda-rezervacije">
+                     <button type="button"  name="button" id="btnOtkazi" class="btn btn-danger">OTKAZI</button>
+                    <!-- <button type="button"  name="button" class="btn btn-lg btn-danger">OTKAZI </button> -->
+                    <input type="submit" value="POTVRDI" id="btnPotvrdi" class="btn btn-success">
+                    
+                </div>
 
             </div>
 
@@ -331,7 +399,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-    <script src="./js/rezervacija.js"></script>
+    <!-- <script src="./js/rezervacija.js"></script> -->
     <script src="./js/rezervacija-modal.js"></script>
 </body>
 

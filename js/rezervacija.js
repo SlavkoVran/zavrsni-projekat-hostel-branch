@@ -10,10 +10,10 @@ var formValidacija = {
 //o gresci ukoliko nije dobro popunjeno 
 function proveriValidaciju(){
 if (formValidacija.ime && formValidacija.email  && formValidacija.telefon){
-    $('#btnDalje1').removeAttr('disabled');
+    $('#btnDaljeKorisnik').removeAttr('disabled');
 }
 else {
-    $('#btnDalje1').attr('disabled', true);
+    $('#btnDaljeKorisnik').attr('disabled', true);
 }
 };
 
