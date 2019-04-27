@@ -12,6 +12,16 @@ body{
 
 .navbar {
     border: none;
+    margin-bottom: 0;
+    /* height: 10%; */
+}
+
+/* .container-fluid{
+    height: 10%;
+} */
+
+.navbar-toggle{
+    margin-top: 15px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -40,6 +50,7 @@ body{
     left: 0%;
     width: 100%;
 }
+
 
 footer {
     background-color: #1f2421;
@@ -108,6 +119,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width:480px) { 
+    /* smartphones, Android phones, landscape iPhone */ 
+
+    
+    
 }
 
 @media screen and (min-width: 769px) {

@@ -4,7 +4,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 5% auto auto auto;
+    grid-template-rows: 9% auto auto auto;
     grid-template-areas: "n n n n n n n n n" "m m m m m m m m m" "r r r r r r r r r" "f f f f f f f f f"
 }
 
