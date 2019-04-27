@@ -4,17 +4,26 @@ body {
     color: #1f2421;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .main-container {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 5% auto 20%;
-    grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "r r r r r r r r r" "f f f f f f f f f"
+    grid-template-rows: 10% auto auto;
+    grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "f f f f f f f f f"
 }
 
 nav {
     grid-area: n;
+}
+
+.logo-branch{
+    width: 100px;
+    height: 100px;
 }
 
 .desno-container {
@@ -22,231 +31,249 @@ nav {
     background-color: #ddd;
 }
 
-.rezervacija-container {
-    position: relative;
-    grid-area: r;
+.levo-container {
+    grid-area: l;
+    background-color: #ddd;
+}
+
+.flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10% 3% 10% 3%;
-    background: violet;
+    justify-content: center;
 }
 
-.rezervacija-container h1 {
-    width: 80%;
-    margin: 0px 0px 20px 0px;
-    padding: 2px 0px 2px 0px;
-    font-size: 2rem;
-    background-color: #1f242177;
-    color: #fff;
+.poruka-ime, .poruka-telefon, .poruka-email, .poruka-datum{
+    color: #f46036;
+    font-size: 1em;
     text-align: center;
-    box-shadow: 2px 2px 5px #1f2421;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+    font-weight: 600;
+    margin: 0;
+   
 }
 
-form {
-    margin-bottom: 5%;
-}
-
-.forma-container {
+.rezervacija-container {
+    grid-area: r;
+    background-image: url("../img/forma-pozadina.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.modal-korisnik {
+    width: 80%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.5);
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+   
+}
+
+.modal-datum {
+    width: 80%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.5);
+    display: none;  
+}
+
+.modal-soba {
+    width: 80%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.5);
+    display: none;  
+}
+
+.ispis-rezervacije{
+    width: 80%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.5);
+    color: white;
+    /* display: none;   */
+}
+/* Stilizovanje Unosa podataka o korisniku */
 
 .forma-korisnik {
+    /* margin-top: 10%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
 }
 
-.forma-korisnik input {
-    height: 50px;
-    width: 80%;
+.forma-korisnik h3 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.btn{
+    margin-top: 10px; 
     margin-bottom: 10px;
-    background: #1f2421;
-    z-index: 1;
-    color: #fff;
 }
 
-/* Stilizovanje poruka o validaciji */
-
-.poruka-ime, .poruka-telefon, .poruka-email {
-    color: red;
-    display: none;
+input {
+    height: 50px;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    color: white;
 }
 
-.poruka-brojKreveta {
-    display: none;
+input::placeholder {
+    color: #dce1de;
 }
 
-.poruka-izbor-soba {
-    display: none;
+input:focus {
+    color: white;
+    border-bottom-style: solid;  
 }
 
-/* Uklanjam dugmice za izbora datuma */
+/* Stilizovanje Unosa podataka o datumu rezervacije */
+
+.rezervacija-datuma-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* margin-top: 10%; */
+    color: white;
+}
+.rezervacija-datuma-container h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.forma-rezervacija-datuma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forma-rezervacija-datuma div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.forma-rezervacija-datuma input {
+    width: 150px;
+    text-align: center;
+}
 
 .izaberi-datum::-webkit-inner-spin-button, .izaberi-datum::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* Modal datuma*/
 
-.modal-datum {
-    width: 100%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    display: none;
-}
+/* Stilizovanje odabira sobe */
 
-.rezervacija-datuma-container {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
+.slike-sobe-izbor {
     justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-soba h3 {
+    margin-top: 0;
     text-align: center;
-    background: white;
-    box-shadow: -5px 5px 10px #DCE1DE;
-    border-radius: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
 }
 
-.rezervacija-datuma-container h2 {
-    margin-top: 15%;
-    ;
-}
-
-.forma-rezervacija-datuma {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.forma-rezervacija-datuma div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10%;
-}
-
-.forma-rezervacija-datuma input {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 10px;
+.modal-soba select{
     background: #1f2421;
-    z-index: 1;
     color: #fff;
-}
-
-/* Responsive prikaz za odabir slika uz pomoc flex-wrap, min-width*/
-
-/* modal sobe */
-
-.modal-soba {
-    width: 100%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    display: none;
-}
-
-.forma-soba {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid green;
-    height: 100%;
-}
-
-.soba-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.soba-izbor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    height: 70%;
-    margin-bottom: 2%;
-}
-
-.soba-izbor img {
-    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    font-size: 1em;
+    box-shadow: 0 5px 5px #1f2421;
+    -webkit-appearance: button;
+    outline: none;
     cursor: pointer;
 }
 
-.img-hover {
-    background-color: #1f2421;
-    opacity: 0.5;
-    transition: 0.7s ease;
+.izbor-soba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.img-hover:hover {
-    opacity: 1;
-    transition: 0.7s ease;
+/* Ispis rezervacije */
+
+/* .ispis-rezervacije{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.ispis{
+    padding-top: 10%;
 }
 
-.levo-container {
-    grid-area: l;
-    background-color: #ddd;
-}
+
+
+
+
+
 
 footer {
     grid-area: f;
 }
 
-/* login forma */
 
-@media screen and (min-width: 769px) {
+
+
+@media screen and (min-width:480px) { 
+    /* smartphones, Android phones, landscape iPhone */ 
+
+    .slike-sobe-izbor {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (min-width:769px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     .main-container {
         width: 100%;
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: 5% auto auto 20%;
-        grid-template-areas: "n n n n n n n n n" "d d r r r r r l l" "d d r r r r r l l" "f f f f f f f f f"
+        grid-template-areas: "n n n n n n n n n" "d r r r r r r r l" "d r r r r r r r l" "f f f f f f f f f"
     }
-    .soba-container {
-        flex-direction: row;
-        justify-content: center;
-        width: 60%;
-        height: 100%;
+
+    .slike-sobe-izbor {
         
-        box-shadow: -5px 5px 10px #DCE1DE;
-        border-radius: 10px;
-    }
-    .forma-soba {
-        display: flex;
-        flex-direction: column;
+        justify-items: center;
         align-items: center;
-        border: 1px solid green;
-        height: 100%;
-        background: white;
-        padding-top: 2%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    /* Responsive prikaz za odabir slika uz pomoc flex-wrap, min-width*/
-    .soba-izbor {
-        min-width: 45%;
-        width: 45%;
-        height: 45%;
-        margin-right: 1%;
-        margin-left: 1%;
+    .slike-sobe-izbor .slika-box {
+        width: 50%;
     }
+    
 }

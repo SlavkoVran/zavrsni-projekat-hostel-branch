@@ -12,7 +12,7 @@
 
 
 
-   
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rezervacija.css">
     <title>Hostel Branch</title>
@@ -21,6 +21,8 @@
 <body>
 
     <div class="main-container">
+
+
 
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -46,99 +48,148 @@
             </div>
         </nav>
 
-        <div class="desno-container">
+        <div class="desno-container"></div>
 
 
-        </div>
-
- <div class="rezervacija-container" >
-<h1>Unesite licne podatke za rezervaciju</h1>
-
-<form action="" method="get" class="forma-korisnik">
-            <input type="text" placeholder="Unesite vaše ime i prezime" id="ime">
-            <p class="poruka-ime" ></p>
-            <input type="text" placeholder="Unesite vaš broj telefona" id="telefon" >
-            <p class="poruka-telefon" ></p>
-            <input type="email" name="" id="email" placeholder="Unesite vaš e-mail">
-            <p class="poruka-email"></p>
-            <button type="button" id="btnDalje1" name="button" class="btn btn-lg btn-success" disabled>DALJE</button>
-</form>
 
 
-<!-- modal datum-->
 
-<div class="modal-datum">
-        <form action="" method="get" class="rezervacija-datuma-container">
-            <h2>Izaberite datume</h2>
-                <div class="forma-rezervacija-datuma">
+
+
+
+
+
+
+        <div class="rezervacija-container">
+
+            <div class="modal-korisnik flex-column">
+                <form action="" method="get" class="forma-korisnik">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png"
+                        alt="Eko Hostel Branch Arandjelovac">
+                    <h3>Unesite licne podatke za rezervaciju</h3>
+                    <input class="input-polje" type="text" placeholder="Unesite vaše ime i prezime" id="ime">
+                    <p class="poruka-ime"></p>
+                    <input type="text" placeholder="Unesite vaš broj telefona" id="telefon">
+                    <p class="poruka-telefon"></p>
+                    <input type="email" name="" id="email" placeholder="Unesite vaš e-mail">
+                    <p class="poruka-email"></p>
+                    <button type="button" id="btnDaljeKorisnik" name="button"
+                        class="btn btn-success dugme">NASTAVI</button>
+                </form>
+            </div>
+
+
+            <div class="modal-datum flex-column">
+                <form action="" method="get" class="rezervacija-datuma-container">
+                    <img class="logo-branch" src="./img/branch logo vista blue.png"
+                        alt="Eko Hostel Branch Arandjelovac">
+                    <h3>Izaberite datume</h3>
+                    <div class="forma-rezervacija-datuma">
                         <div>
-                                <span>Datum dolaska:</span>
-                                <input type="date" name="" id="datumDolaska" class="izaberi-datum" placeholder="Izaberite početni datum">
-                                
+                            <span>Datum prijave:</span>
+                            <input type="date" name="" id="datumPrijave" class="izaberi-datum"
+                                placeholder="Izaberite početni datum">
                         </div>
-                            
                         <div>
-                                
-                                <span>Datum odlaska:</span>
-                                <input type="date" name="" id="datumOdlaska" class="izaberi-datum" placeholder="Izaberite krajnji datum">
+                            <span>Datum odjave:</span>
+                            <input type="date" name="" id="datumOdjave" class="izaberi-datum"
+                                placeholder="Izaberite krajnji datum">
                         </div>
                         <p class="poruka-datum"></p>
-            
-                </div>
-
-
-                <div>
-                        <button type="button" id="btnNazad2" name="button" class="btn btn-lg btn-success" >NAZAD</button>
-                        <button type="button" id="btnDalje2" name="button" class="btn btn-lg btn-success" >DALJE</button>
-                </div>
-                
-           
-                        
+                    </div>
+                    <div>
+                        <button type="button" id="btnNazadDatum" name="button"
+                            class="btn btn-warrning dugme">NAZAD</button>
+                        <button type="button" id="btnDaljeDatum" name="button"
+                            class="btn btn-success dugme">NASTAVI</button>
+                    </div>
                 </form>
-</div>
+            </div>
 
-<!-- modal izbor sobe -->
+            <div class="modal-soba flex-column">
+                <img class="logo-branch" src="./img/branch logo vista blue.png" alt="Eko Hostel Branch Arandjelovac">
+                <h3>Izaberite sobu</h3>
+                <div class="izbor-soba">
+                    <select name="SobaC" id="izborSoba">
+                        <option value="Soba 'A'">Soba "A" sa dva kreveta</option>
+                        <option value="Soba 'A'">Soba "B" sa cetiri kreveta</option>
+                        <option value="Soba 'A'">Soba "C" sa cetiri kreveta</option>
+                        <option value="Soba 'A'">Soba "D" sa osam kreveta</option>
+                        <option disabled selected>Izaberi</option>
+                    </select>
 
-        
-<div class="modal-soba"> 
+                    <input type="text" name="brKreveta" id="brKreveta" placeholder="Unesite broj krevete">
 
 
-     <form action="" method="get" class="forma-soba">
 
-            <h2>Izaberite sobu</h2>
-         <div class="soba-container">
-             
-         <div class="soba-izbor">
-                <p>Soba"A" sa 2 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa dva kreveta" class="img-hover">
-         </div>
-         <div class="soba-izbor">
-             <p>Soba"B" sa 4 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa četiri kreveta"class="img-hover">
-         </div>
-         <div class="soba-izbor">
-                <p>Soba"C" sa 4 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa četiri kreveta"class="img-hover">
-         </div>
-         <div class="soba-izbor">
-                <p>Soba"D" sa 8 kreveta:</p>
-                <img src="./img/4kreveta.jpg" alt="Eko hostel soba sa osam kreveta"class="img-hover">
-         </div>
+
+
+
+
+                </div>
+                <button type="button" id="btnNazadRezervacija" name="button"
+                    class="btn btn-warrning dugme">NAZAD</button>
+                <button type="submit" id="btnPrikaziRezervaciju" class="btn btn-success dugme">PRIKAZI</button>
+
+
+            </div>
+
+            <div class="ispis-rezervacije flex-column">
+                <div id="ispis-naslov"></div>
+                <div id="ispis table-responsive">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Kupac</th>
+                                <th>Telefon</th>
+                                <th>email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-korisnik"></tbody>
+
+                    </table>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Datum prijave</th>
+                                <th>Datum Odjave</th>
+                                <th>Soba</th>
+                                <th>Broj Kreveta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-rezervacija"></tbody>
+
+                    </table>
+
+                    <form action="https://formspree.io/slavkov.mob@gmail.com" method="POST" >
+                    <input name="ime" id="slanjeIme">
+                    <input  name="telefon" id="slanjePrezime" >
+                    <input name="email"  id="slanjeEmail">
+                    <button type="submit" id="btnPosalji">Posalji</button>
+                </form>
+
+                </div>
+
+                <div class="btn-potvrda-rezervacije">
+                    <button type="button" name="button" id="btnOtkazi" class="btn btn-danger">OTKAZI</button>
+
+                    <button type="submit" value="POTVRDI" id="btnPotvrdi" class="btn btn-success dugme">POTVRDI</button>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-     </form>
-    </div>
-            
-     
-        </div>
-
-        <div class="levo-container">
-
-            
-        </div>
 
 
+
+
+
+
+
+        <div class="levo-container"></div>
 
 
 
@@ -171,13 +222,12 @@
 
             </div>
         </footer>
-    </div>
 
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.0.js"
-  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-  crossorigin="anonymous"></script>
-<script src="./js/rezervacija.js"></script>
-<script src="./js/rezervacija-modal.js"></script>
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <script src="./js/rezervacija.js"></script>
+    <script src="./js/rezervacija-modal.js"></script>
 </body>
 
 </html>
