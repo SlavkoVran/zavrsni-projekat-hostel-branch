@@ -1,9 +1,27 @@
-
+:root{
+    font-size: 16px;
+}
 body{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
     color: #fff;
+}
+* {
+    box-sizing: border-box;
+} 
+
+nav {
+    
+    grid-area: n;
+}
+
+footer {
+    grid-area: f;
+}
+
+.logo-branch{
+    width: 100px;
+    height: 100px;
 }
 
 .container-fluid {

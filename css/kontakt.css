@@ -1,0 +1,135 @@
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 10% auto auto;
+    grid-template-areas:
+    "n n n n n n n n n" 
+    "m m m m m m m m m" 
+    "f f f f f f f f f"
+}
+
+body{
+    background: #fff;
+    color: #edc649;
+    line-height: 1.6;
+}
+
+main {
+    grid-area: m;
+}
+
+.kontakt-container{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.kontakt-branch{
+    text-align: center;
+}
+
+.kontakt-branch span{
+    color: #91d0aa;
+}
+
+.kontakt-wrapper{
+    background: rgb(31,36,33, 0.7);
+    box-shadow: 0 0 20px 0 rgb(31,36,33, 0.7);
+}
+
+.kontakt-wrapper > *{
+    padding: 1em;
+}
+
+.kontakt-info{
+    background: #edc649;
+    color: #1f2421;
+
+}
+
+.kontakt-info h3, .kontakt-info ul{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* stilizovanje forme */
+
+.kontakt form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.kontak form label{
+    display: block;
+}
+
+.kontak form p{
+    margin: 0;
+}
+
+.kontakt form .kontakt-p{
+    grid-column: 1/3;
+}
+
+.kontakt form button, .kontakt form input, .kontakt form textarea{
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #edc649;
+    background: none;
+}
+
+
+
+.kontakt form button{
+    background: #edc649;
+    color: #1f2421;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.kontakt form button:hover, .contact form button:focus{
+    background: #f46036;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+
+.porukaKorisnik{
+    text-align: center;
+    padding: 10px;
+    background: #91d0aa;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
+
+@media(min-width: 769px){
+.kontakt-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.kontakt-wraper > *{
+    padding: 2em;
+}
+.kontakt-info h3, .kontakt-info ul, .kontakt-branch{
+    text-align: left;
+    
+}
+
+
+}
+
+
+
