@@ -1,44 +1,29 @@
 
 // Navigacija kroz formu dugmići
+//prelazak na popunjavanje datuma
 $('#btnDaljeKorisnik').on('click', function () {
     $('.modal-korisnik').hide();
     $('.modal-datum').show();
 });
 
+// vracanje na unos podataka o korisniku
 $('#btnNazadDatum').on('click', function () {
     $('.modal-datum').hide();
     $('.modal-korisnik').show();
 });
 
+//vracanje sa izbora sobe na unos datuma
 $('#btnNazadRezervacija').on('click', function () {
     $('.modal-soba').css('display', 'none');
     $('.modal-datum').css('display', 'flex');
 });
 
+//prikaz unetih podataka
 $('#btnPrikaziRezervaciju').on('click', function () {
     $('.modal-soba').css('display', 'none');
     $('.ispis-rezervacije').css('display', 'flex');
 });
 
-
-
-
-
-//Vracanje na pocetnu stranu
-$('#btnDaljeDatum').on('click', function () {
-
-    var datumPrijave = $('#datumPrijave').val();
-
-    if (datumPrijave != 0) {
-        $('.poruka-datum').hide();
-        $('.modal-datum').css('display', 'none');
-        $('.modal-soba').css('display', 'flex');
-    }
-    else {
-        $('.poruka-datum').text('Niste uneli validan datum').show();
-
-    }
-});
 
 
 // Rezervacija klasa 
@@ -55,10 +40,8 @@ class Rezervacija {
 }
 
 // KI klas, korisnicki interfejs
-
 class KI {
     
-
     static dodajRezervacijuUlistu(rez) {
         const listaKorisnik = document.querySelector('#lista-korisnik');
         const listaRezervacija = document.querySelector('#lista-rezervacija');
@@ -67,12 +50,10 @@ class KI {
         const redKorisnik = document.createElement('tr');
         const redRezervacija = document.createElement('tr');
         
-
         redKorisnik.innerHTML = `
         <td>${rez.ime}</td>
         <td>${rez.telefon}</td>
         <td>${rez.email}</td>
-
         `;
 
         redRezervacija.innerHTML = `
@@ -128,34 +109,8 @@ document.getElementById("btnPrikaziRezervaciju").addEventListener('click', (e) =
 
 }); 
 
-//Slanje forme namail
-document.getElementById("btnPosalji").addEventListener('click', (e) =>{
 
-    //Prevent actual submit
-    e.preventDefault();
-
-
-    // hvatanje unetih vrednosti
-    const ime = document.getElementById('ime').value;
-    const telefon = document.getElementById('telefon').value;
-    const email = document.getElementById('email').value;
-    const datumPrijave = document.getElementById('datumPrijave').value;
-    const datumOdjave = document.getElementById('datumOdjave').value;
-    const soba = document.getElementById('izborSoba').value;
-    const brKreveta = document.getElementById('brKreveta').value;
-
-    let slanjeIme = document.getElementById('slanjeIme');
-    slanjeIme = ime;
-    console.log(slanjeIme);
-
-   
-   
-
-}); 
-
-
-
-//Event:  otkazi rezervaciju
+//Event:  otkazi rezervaciju, vracanje na pocetnu stranu 
 document.getElementById('btnOtkazi').addEventListener('click',(e) =>{
 window.location = "./index.html";
 });

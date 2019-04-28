@@ -1,17 +1,31 @@
-:root{
-    font-size: 16px;
-}
-body{
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-}
+
 * {
     box-sizing: border-box;
 } 
 
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+input {
+    height: 50px;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+
 nav {
-    
     grid-area: n;
 }
 
@@ -20,8 +34,8 @@ footer {
 }
 
 .logo-branch{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .container-fluid {

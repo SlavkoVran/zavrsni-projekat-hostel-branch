@@ -9,18 +9,13 @@ var config = {
   firebase.initializeApp(config);
 
 // poruke
-
 var porukaRef = firebase.database().ref('poruka');
-
-
-
 
 // za pozivanje snimanja forme
 document.getElementById('kontaktForm').addEventListener('submit',
  posaljiForm);
 
 // Snimanje forme
-
  function posaljiForm(e){
      e.preventDefault();
 
@@ -38,14 +33,12 @@ document.getElementById('kontaktForm').addEventListener('submit',
      document.querySelector('.porukaKorisnik').style.display = 'block';
 
      // skrivanje poruke nakon odredjenog vremena
-
      setTimeout(function(){
          document.querySelector('.porukaKorisnik').style.display = 'none';
      },3000);
 
      // brisanje iz input polja
      document.getElementById('kontaktForm').reset();
-     
  }
 
  // Funkcija za uzimanje vrednosti 
@@ -54,7 +47,6 @@ document.getElementById('kontaktForm').addEventListener('submit',
  }
 
  // Snimi poruku firebase
-
  function snimiPoruku (ime, nazivKompanije, email, telefon, poruka){
      var novaPorukaRef = porukaRef.push();
      novaPorukaRef.set({

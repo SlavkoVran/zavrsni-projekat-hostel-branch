@@ -17,24 +17,24 @@ else {
 }
 };
 
-// provera validnosti input polja #ime
-$('#ime').on('input', function(){
-var ime = $(this).val();
-
+//funkcija za prikaz poruke ukoliko nisu uneti validni podaci
 function prikaziPoruku(sadrzaj){ 
     $('.poruka-ime').text(sadrzaj).show();
 };
 
+//funkcija koja ukoliko su uneti validni podaci ne ispisuje poruku
 function sakrijPoruku(){
     $('.poruka-ime').hide();
 }
+
+// validacija unosa imena
+$('#ime').on('input', function(){
+var ime = $(this).val();
 
 if (ime.length < 1){
     prikaziPoruku('Polje je prazno! Unesite ime');
     formValidacija.ime = false;
     proveriValidaciju();
-
-
 }
 else{
     sakrijPoruku();
@@ -53,6 +53,19 @@ proveriValidaciju();
 
     }
 }
+});
+
+//validacija unosa datuma
+$('#btnDaljeDatum').on('click', function () {
+    var datumPrijave = $('#datumPrijave').val();
+    if (datumPrijave != 0) {
+        $('.poruka-datum').hide();
+        $('.modal-datum').css('display', 'none');
+        $('.modal-soba').css('display', 'flex');
+    }
+    else {
+        $('.poruka-datum').text('Niste uneli validan datum').show();
+    }
 });
 
 
