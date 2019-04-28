@@ -12,8 +12,8 @@
 }
 
 body{
+    color: #1f2421;
     background: #fff;
-    color: #edc649;
     line-height: 1.6;
 }
 
@@ -43,6 +43,7 @@ ul{
 }
 
 .kontakt-wrapper{
+    color: #fff;
     background: rgb(31,36,33, 0.7);
     box-shadow: 0 0 20px 0 rgb(31,36,33, 0.7);
 }
@@ -52,7 +53,7 @@ ul{
 }
 
 .kontakt-info{
-    background: #edc649;
+    background: #91d0aa;
     color: #1f2421;
 
 }
@@ -85,21 +86,21 @@ ul{
 .kontakt form button, .kontakt form input, .kontakt form textarea{
     width: 100%;
     padding: 1em;
-    border: 1px solid #edc649;
+    border: 1px solid #fff;
     background: none;
 }
 
 
 
 .kontakt form button{
-    background: #edc649;
-    color: #1f2421;
+    background: #f46036;
+    /* color: #1f2421; */
     border: 0;
     text-transform: uppercase;
 }
 
 .kontakt form button:hover, .contact form button:focus{
-    background: #f46036;
+    background: #91d0aa;
     color: #fff;
     outline: 0;
     transition: background-color 2s ease-out;

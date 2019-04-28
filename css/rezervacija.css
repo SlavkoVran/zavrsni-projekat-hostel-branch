@@ -57,37 +57,21 @@ body {
     align-items: center;
 }
 
+.modal-korisnik, .modal-datum, .modal-soba, .ispis-rezervacije{
+    width: 80%;
+    height: 100%;
+    background: rgba(31, 36, 33, 0.5);
+    display: none;  
+}
 
 .modal-korisnik {
-    width: 80%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.5);
     display: flex;
     flex-direction: column;
-    /* display: none; */
-   
-}
-
-.modal-datum {
-    width: 80%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.5);
-    display: none;  
-}
-
-.modal-soba {
-    width: 80%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.5);
-    display: none;  
+    
 }
 
 .ispis-rezervacije{
-    width: 80%;
-    height: 100%;
-    background: rgba(31, 36, 33, 0.5);
     color: white;
-    /* display: none;   */
 }
 /* Stilizovanje Unosa podataka o korisniku */
 
@@ -111,15 +95,9 @@ body {
     margin-bottom: 10px;
 }
 
-input {
-    height: 50px;
-    font-size: 1em;
-    text-align: center;
-    border: none;
-    border-bottom: 2px solid white;
-    background-color: transparent;
-    outline: none;
-    color: white;
+.forma-korisnik input {
+    width: 80%;
+   
 }
 
 input::placeholder {
