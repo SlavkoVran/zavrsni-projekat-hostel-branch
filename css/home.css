@@ -4,7 +4,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 9% auto auto auto;
+    grid-template-rows: 10% auto auto auto;
     grid-template-areas: "n n n n n n n n n" "m m m m m m m m m" "r r r r r r r r r" "f f f f f f f f f"
 }
 
@@ -12,9 +12,7 @@ h3 {
     margin: 0px;
 }
 
-nav {
-    grid-area: n;
-}
+
 
 .main {
     height: 100vh;
@@ -126,9 +124,7 @@ nav {
     
 }
 
-footer {
-    grid-area: f;
-}
+
 
 /* Responsive */
 
@@ -164,8 +160,3 @@ footer {
         
     }
 }
-
-
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) {}
-
-@media only screen and (max-device-width: 480px) {}

@@ -4,27 +4,20 @@ body {
     color: #1f2421;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 .main-container {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 10% auto auto;
+    grid-template-rows: 9% auto auto;
     grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "f f f f f f f f f"
 }
 
-nav {
-    grid-area: n;
-}
 
-.logo-branch{
-    width: 100px;
-    height: 100px;
-}
+
+
 
 .desno-container {
     grid-area: d;
@@ -228,15 +221,6 @@ input:focus {
     padding-top: 10%;
 }
 
-
-
-
-
-
-
-footer {
-    grid-area: f;
-}
 
 
 
