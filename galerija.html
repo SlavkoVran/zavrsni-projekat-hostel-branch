@@ -6,33 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-
-
-    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/galerija.css">
     <title>Hostel Branch</title>
 </head>
 
 <body>
 
     <div class="main-container">
-        <nav class=" navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#navbar-collapse-main">
-                        <span class=" sr-only">Toggle navigation!!!!!!</span>
+                        <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <div class="  collapse navbar-collapse" id="navbar-collapse-main">
+                <div class="collapse navbar-collapse" id="navbar-collapse-main">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="active hover-border" href="index.html">Početna</a></li>
                         <li><a class="" href="onam.html">O nama</a></li>
@@ -44,58 +40,25 @@
             </div>
         </nav>
 
-        <section class="main video-container">
-
-            <div class="home-video-wrapper">
-                <video src="./vid/Horse-Fence.mp4" autoplay loop muted></video>
+        <div class="galerija-container">
+            <div class="glavna-slika">
+                <img src="./img/g1.jpg" id="trenutna">
             </div>
-            <div class="home-sadrzaj">
-                <h1><span>Eko</span> Hostel</h1>
-                <img class="logo-branch" src="./img/branch-logo-vista-blue.png" alt="">
-                <p>Udoban smestaj, prelepa priroda i konji.</p>
-                <a href="rezervacija.html" class="btn btn-general"> Rezervisite smestaj</a>
+            <div class="slike">
+                <img src="./img/g1.jpg">
+                <img src="./img/g2.jpg">
+                <img src="./img/g3.jpg">
+                <img src="./img/sobaB.jpg">
+                <img src="./img/sobaA.jpg">
+                <img src="./img/sobaC.jpg">
+                <img src="./img/sobaD.jpg">
+                <img src="./img/vidiAr.jpg">
+                <img src="./img/KKA.jpg">
+                <img src="./img/g4.jpg">
+                <img src="./img/g5.jpg">
+                <img src="./img/g6.jpg">
             </div>
-        </section>
-
-        <section class="sobe">
-
-            <div class="sobe-container">
-                <div class="sobe-sadrzaj">
-                    <a href="galerija.html">
-                        <h6>Galerija</h6>
-                    </a>
-                </div>
-                <img src="./img/g1.jpg" alt="hostel smestaj soba sa dva kreveta">
-            </div>
-
-            <div class="sobe-container">
-                <div class="sobe-sadrzaj">
-                    <a href="https://www.vidiarandjelovac.com/">
-                        <h6>Vidi Aranđelovac</h6>
-                    </a>
-                </div>
-                <img src="./img/vidiAr.jpg" alt="hostel smestaj soba sa cetiri kreveta">
-            </div>
-
-            <div class="sobe-container">
-                <div class="sobe-sadrzaj">
-                    <a href="https://www.bukovickabanja.rs/">
-                        <h6>Bukovicka banja</h6>
-                    </a>
-                </div>
-                <img src="./img/bukovickaBanja.jpg" alt="hostel smestaj soba sa cetiri kreveta">
-            </div>
-
-            <div class="sobe-container">
-                <div class="sobe-sadrzaj">
-                    <a href="https://www.konjickiklubarandjelovac.rs/sr-yu/">
-                        <h6>Konjički klub "Aranđelovac"</h6>
-                    </a>
-                </div>
-                <img src="./img/KKA.jpg" alt="hostel smestaj soba sa osam kreveta">
-            </div>
-
-        </section>
+        </div>
 
         <footer>
             <div class="footer-box-1">
@@ -115,8 +78,10 @@
                 </div>
             </div>
         </footer>
+
     </div>
 
+    <script src="./js/galerija.js"></script>
 </body>
 
 </html>

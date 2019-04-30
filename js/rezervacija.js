@@ -5,6 +5,7 @@ var formValidacija = {
     telefon: false,
 };
 
+
 // funkcija koja proverava da li su svi uslovi validirani odnosno
 //  da li je forma ispravno popunjena i prikaz poruke 
 //o gresci ukoliko nije dobro popunjeno 
@@ -86,8 +87,6 @@ $('#email').on('input', function(){
         prikaziPoruku('Polje je prazno! Unesite email');
         formValidacija.email = false;
         proveriValidaciju();
-    
-    
     }
     else{
         sakrijPoruku();
@@ -108,20 +107,11 @@ $('#email').on('input', function(){
     }
     });
 
-
 //provera validnosti input polja #telefon
 $('#telefon').on('input', function(){
     var telefon = $(this).val();
 
-    function prikaziPoruku(sadrzaj){ 
-        $('.poruka-telefon').text(sadrzaj).show();
-        
-    };
     
-    function sakrijPoruku(){
-        $('.poruka-telefon').hide();
-      
-    }
     
     if (telefon.length < 1){
         prikaziPoruku('Polje je prazno! Unesite broj telefona');

@@ -75,22 +75,18 @@ class KI {
 
 };
 
-// local storage
-
 // Dogadjaji: Prikazi rezervaciju
-
 document.addEventListener('DOMContentLoaded', KI.prikaziRezervaciju);
 
 
 // Dodavanej nove rezervacije
-
 document.getElementById("btnPrikaziRezervaciju").addEventListener('click', (e) =>{
 
-    //Prevent actual submit
-    e.preventDefault();
+//Prevent actual submit
+e.preventDefault();
 
 
-    // hvatanje unetih vrednosti
+// hvatanje unetih vrednosti
     const ime = document.getElementById('ime').value;
     const telefon = document.getElementById('telefon').value;
     const email = document.getElementById('email').value;
@@ -100,11 +96,11 @@ document.getElementById("btnPrikaziRezervaciju").addEventListener('click', (e) =
     const brKreveta = document.getElementById('brKreveta').value;
     
 
-   // kreiranjene rezervacije 
+// kreiranjene rezervacije 
    const rezervacija = new Rezervacija (ime, telefon, email, datumPrijave, datumOdjave, soba, brKreveta);
    
 
-   //prikaz korisniku
+//prikaz korisniku
    KI.dodajRezervacijuUlistu(rezervacija);
 
 }); 

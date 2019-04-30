@@ -1,23 +1,15 @@
 /* Gridovanje stranice rezervacije */
-
 body {
     color: #1f2421;
 }
-
-
-
 .main-container {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 9% auto auto;
+    grid-template-rows: 50px auto auto;
     grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "f f f f f f f f f"
 }
-
-
-
-
 
 .desno-container {
     grid-area: d;
@@ -42,7 +34,6 @@ body {
     text-align: center;
     font-weight: 600;
     margin: 0;
-   
 }
 
 .rezervacija-container {
@@ -73,6 +64,7 @@ body {
 .ispis-rezervacije{
     color: white;
 }
+
 /* Stilizovanje Unosa podataka o korisniku */
 
 .forma-korisnik {
@@ -187,20 +179,10 @@ input:focus {
     align-items: center;
 }
 
-/* Ispis rezervacije */
-
-/* .ispis-rezervacije{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .ispis{
     padding-top: 10%;
 }
-
-
-
 
 
 @media screen and (min-width:480px) { 
@@ -218,24 +200,9 @@ input:focus {
 @media screen and (min-width:769px) { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     .main-container {
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: 5% auto auto 20%;
+    
+        grid-template-rows: 50px auto auto 20%;
         grid-template-areas: "n n n n n n n n n" "d r r r r r r r l" "d r r r r r r r l" "f f f f f f f f f"
     }
 
-    .slike-sobe-izbor {
-        
-        justify-items: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .slike-sobe-izbor .slika-box {
-        width: 50%;
-    }
-    
 }
