@@ -3,22 +3,19 @@ body {
     color: #1f2421;
 }
 .main-container {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    
     grid-template-rows: 50px auto auto;
-    grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "f f f f f f f f f"
+    grid-template-areas: "n n n n n n n n n" "r r r r r r r r r" "f f f f f f f f f";
 }
 
 .desno-container {
     grid-area: d;
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .levo-container {
     grid-area: l;
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .flex-column {
@@ -46,11 +43,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .modal-korisnik, .modal-datum, .modal-soba, .ispis-rezervacije{
     width: 80%;
-    height: 100%;
+    height: 100vh;
     background: rgba(31, 36, 33, 0.5);
     display: none;  
 }
@@ -58,7 +56,6 @@ body {
 .modal-korisnik {
     display: flex;
     flex-direction: column;
-    
 }
 
 .ispis-rezervacije{
@@ -89,7 +86,6 @@ body {
 
 .forma-korisnik input {
     width: 80%;
-   
 }
 
 input::placeholder {
@@ -200,9 +196,13 @@ input:focus {
 @media screen and (min-width:769px) { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     .main-container {
-    
-        grid-template-rows: 50px auto auto 20%;
+
+        grid-template-rows: 50px auto auto auto;
         grid-template-areas: "n n n n n n n n n" "d r r r r r r r l" "d r r r r r r r l" "f f f f f f f f f"
+    }
+
+    .forma-korisnik input {
+        width: 50%;
     }
 
 }
