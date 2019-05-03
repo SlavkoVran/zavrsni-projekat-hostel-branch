@@ -32,21 +32,17 @@
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-main">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active hover-border" href="index.html">Početna</a></li>
-                        <li><a class="" href="onam.html">O nama</a></li>
+                        <li><a class="" href="index.html">Početna</a></li>
+                        <li><a class="" href="onama.html">O nama</a></li>
                         <li><a class="" href="rezervacija.html">Rezervacija</a></li>
                         <li><a class="" href="galerija.html">Galerija</a></li>
-                        <li><a class="" href="kontakt.html">Kontakt</a></li>
+                        <li><a class="active hover-border" href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-
-
         <main>
-
-
             <div class="kontakt-container ">
                 <h1 class="kontakt-branch">Hostel <span>Branch</span></h1>
                 <div class="kontakt-wrapper animated bounceInLeft">
@@ -58,20 +54,26 @@
                             <li><i class="fa fa-phone"></i> +381 60 6711 057</li>
                             <li><i class="fa fa-envelope"></i> office@branch.com</li>
                         </ul>
+
+                        <div class="mapa">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2854.95035378994!2d20.53250585120005!3d44.31097111756242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47574d5e6cb7d77f%3A0xad5ff6f61e11ad9d!2z0JDQu9C10LrRgdC1INCo0LDQvdGC0LjRm9CwIDQyLCA1NDAxMzA!5e0!3m2!1ssr!2srs!4v1556463301146!5m2!1ssr!2srs"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div class="kontakt">
                         <h3>Pišite nam</h3>
                         <div class="porukaKorisnik">Vaša poruka je poslata.</div>
 
-                        <form id="kontaktForm" >
+                        <form id="kontaktForm">
                             <p>
                                 <label>Ime i prezime:</label>
                                 <input type="text" name="ime" id="kIme" required>
                             </p>
                             <p>
-                                    <label>Naziv kompanije:</label>
-                                    <input type="text" name="nazivKompanije" id="kNazivKompanije">
-                                </p>
+                                <label>Naziv kompanije:</label>
+                                <input type="text" name="nazivKompanije" id="kNazivKompanije">
+                            </p>
                             <p>
                                 <label>Broj telefona</label>
                                 <input type="text" name="Broj telefona" id="kTelefon">
@@ -80,62 +82,28 @@
                                 <label>E-mail adresa:</label>
                                 <input type="email" name="email" id="kEmail" required>
                             </p>
-                            <p class="kontakt-p" >
-                                <label >Poruka:</label>
+                            <p class="kontakt-p">
+                                <label>Poruka:</label>
                                 <textarea name="poruka" rows="5" id="kPoruka"></textarea>
                             </p>
-                            <p class="kontakt-p"> 
+                            <p class="kontakt-p">
                                 <button>Pošalji</button>
                             </p>
                         </form>
                     </div>
-                    
                 </div>
-
-                <div class="kontakt-mapa">
-                    <div class="mapa" >
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2854.95035378994!2d20.53250585120005!3d44.31097111756242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47574d5e6cb7d77f%3A0xad5ff6f61e11ad9d!2z0JDQu9C10LrRgdC1INCo0LDQvdGC0LjRm9CwIDQyLCA1NDAxMzA!5e0!3m2!1ssr!2srs!4v1556463301146!5m2!1ssr!2srs"  allowfullscreen></iframe>
-                    </div>
-                    <div class="mapa-slika">
-                    <img src="" alt="">
-                    </div>
-                    
-                                </div>
+                
             </div>
-
-            
-
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <footer>
             <div class="footer-box-1">
                 <h3>Društvene mreže</h3>
                 <div class="ikonice">
-                    <a target="_blank" href="https://www.facebook.com/branchecohostel/"><i class="fa fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/hostelbranch/?hl=sr"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/branchecohostel/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/hostelbranch/?hl=sr"><i
+                            class="fa fa-instagram"></i></a>
                 </div>
             </div>
             <img class="img-footer" src="./img/branch-logo-vista-blue.png" alt="">
@@ -149,8 +117,8 @@
             </div>
         </footer>
     </div>
-<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-<script src="./js/kontakt.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script src="./js/kontakt.js"></script>
 </body>
 
 </html>

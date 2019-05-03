@@ -5,56 +5,58 @@ var config = {
     projectId: "kontakt-forma-834bb",
     storageBucket: "kontakt-forma-834bb.appspot.com",
     messagingSenderId: "815731210255"
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
 
-// poruke
-var porukaRef = firebase.database().ref('poruka');
+// veza
+var porukaRef = firebase.database().ref("poruka");
 
 // za pozivanje snimanja forme
-document.getElementById('kontaktForm').addEventListener('submit',
- posaljiForm);
+document.getElementById("kontaktForm").addEventListener("submit",
+posaljiForm);
 
 // Snimanje forme
- function posaljiForm(e){
-     e.preventDefault();
+function posaljiForm(e) {
+    e.preventDefault();
 
-     var ime = snimiVrednost('kIme');
-     var telefon = snimiVrednost('kTelefon');
-     var email = snimiVrednost('kEmail');
-     var nazivKompanije = snimiVrednost('kNazivKompanije');
-     var poruka = snimiVrednost('kPoruka');
+    var ime = uzmiVrednost("kIme");
+    var telefon = uzmiVrednost("kTelefon");
+    var email = uzmiVrednost("kEmail");
+    var nazivKompanije = uzmiVrednost("kNazivKompanije");
+    var poruka = uzmiVrednost("kPoruka");
 
-     // snimanje poruke
-     snimiPoruku(ime, telefon, email, nazivKompanije, poruka);
+    // snimanje poruke
+    snimiPoruku(ime, telefon, email, nazivKompanije, poruka);
 
-     // Prikaz poruke za korisnika
 
-     document.querySelector('.porukaKorisnik').style.display = 'block';
 
-     // skrivanje poruke nakon odredjenog vremena
-     setTimeout(function(){
-         document.querySelector('.porukaKorisnik').style.display = 'none';
-     },3000);
+    // Prikaz poruke za korisnika
 
-     // brisanje iz input polja
-     document.getElementById('kontaktForm').reset();
- }
+    document.querySelector(".porukaKorisnik").style.display = "block";
 
- // Funkcija za uzimanje vrednosti 
- function snimiVrednost(id){
-     return document.getElementById(id).value;
- }
+    // skrivanje poruke nakon odredjenog vremena
+    setTimeout(function () {
+        document.querySelector(".porukaKorisnik").style.display = "none";
+    }, 3000);
 
- // Snimi poruku firebase
- function snimiPoruku (ime, nazivKompanije, email, telefon, poruka){
-     var novaPorukaRef = porukaRef.push();
-     novaPorukaRef.set({
-        ime: ime, 
-        telefon: telefon,  
-        email: email, 
-        nazivKompanije: nazivKompanije, 
+    // brisanje iz input polja
+    document.getElementById("kontaktForm").reset();
+}
+
+// Funkcija za uzimanje vrednosti 
+function uzmiVrednost(id) {
+    return document.getElementById(id).value;
+}
+
+// Snimi poruku firebase
+function snimiPoruku(ime, nazivKompanije, email, telefon, poruka) {
+    var novaPorukaRef = porukaRef.push();
+    novaPorukaRef.set({
+        ime: ime,
+        telefon: telefon,
+        email: email,
+        nazivKompanije: nazivKompanije,
         poruka: poruka
-     });
+    });
 
- }
+}

@@ -28,11 +28,9 @@ input {
     height: calc(100vh-50px);
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-  
 }
 
 nav {
-    
     grid-area: n;
 }
 
@@ -45,22 +43,10 @@ footer {
     height: 150px;
 }
 
-
-/* .container-fluid {
-    background-color: #1f2421;
-} */
-
 .navbar {
     border: none;
     margin-bottom: 0;
 }
-
-
-
-/* .navbar-toggle {
-    margin-top: 15px;
-} */
-
 
 .navbar-default .navbar-nav>li>a {
     color: #fff;
@@ -73,35 +59,21 @@ footer {
     color: #f46036;
 }
 
-/* .navbar-default .navbar-nav>li>a:after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #edc649;
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transition: all 1000ms ease;
-} */
-
-/* .navbar-default .navbar-nav>li>a:hover:after {
-    left: 0%;
-    width: 100%;
-} */
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #91d0aa;
 }
+
 .navbar-default .navbar-toggle {
     border-color: #91d0aa;
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: #1f2421;
-} 
+}
 
- .navbar-fixed-top {
+.navbar-fixed-top {
     background-color: #1f2421;
-} 
+}
 
 footer {
     background-color: #1f2421;
@@ -169,9 +141,7 @@ footer {
     align-items: center;
 }
 
-@media screen and (min-width:480px) {
-    /* smartphones, Android phones, landscape iPhone */
-}
+
 
 @media screen and (min-width: 769px) {
     .navbar-default {
@@ -199,8 +169,3 @@ footer {
     }
 }
 
-@media screen and (min-width:769px) { 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-   
-
-}
