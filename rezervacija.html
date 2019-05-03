@@ -9,21 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-
-
-
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rezervacija.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Hostel Branch</title>
 </head>
 
 <body>
 
     <div class="main-container">
-
-
-
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -37,38 +31,26 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-main">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active hover-border" href="index.html">Početna</a></li>
+                        <li><a class="" href="index.html">Početna</a></li>
                         <li><a class="" href="onama.html">O nama</a></li>
-                        <li><a class="" href="rezervacija.html">Rezervacija</a></li>
+                        <li><a class="active hover-border" href="rezervacija.html">Rezervacija</a></li>
                         <li><a class="" href="galerija.html">Galerija</a></li>
                         <li><a class="" href="kontakt.html">Kontakt</a></li>
                     </ul>
-
                 </div>
             </div>
         </nav>
 
         <div class="desno-container"></div>
-
-
-
-
-
-
-
-
-
-
-
         <div class="rezervacija-container">
 
             <div class="modal-korisnik flex-column">
-                <form action="" method="get" class="forma-korisnik">
+                <form method="get" class="forma-korisnik">
+                    <p class="poruka"></p>
                     <img class="logo-branch" src="./img/branch-logo-vista-blue.png"
                         alt="Eko Hostel Branch Arandjelovac">
-                    <h3>Unesite licne podatke za rezervaciju</h3>
-                    <p class="poruka" ></p>
-                    <input class="input-polje" type="text"  id="ime">
+                    <h3>Unesite lične podatke za rezervaciju</h3>
+                    <input class="input-polje" type="text" id="ime">
                     <p class="poruka-ime"></p>
                     <input type="text" placeholder="Unesite vaš broj telefona" id="telefon">
                     <p class="poruka-telefon"></p>
@@ -78,21 +60,20 @@
                         disabled>NASTAVI</button>
                 </form>
             </div>
-
-
             <div class="modal-datum flex-column">
-                <form action="" method="get" class="rezervacija-datuma-container">
+                <form method="get" class="rezervacija-datuma-container">
                     <img class="logo-branch" src="./img/branch-logo-vista-blue.png"
                         alt="Eko Hostel Branch Arandjelovac">
                     <h3>Izaberite datume</h3>
                     <div class="forma-rezervacija-datuma">
+                        <p class="poruka"></p>
                         <div>
                             <span>Datum prijave:</span>
-                            <input type="date" name="datumPrijave" id="datumPrijave" class="izaberi-datum">
+                            <input type="text" name="datumPrijave" id="datumPrijave" class="izaberi-datum">
                         </div>
                         <div>
                             <span>Datum odjave:</span>
-                            <input type="date" name="datumOdjave" id="datumOdjave" class="izaberi-datum">
+                            <input type="text" name="datumOdjave" id="datumOdjave" class="izaberi-datum">
                         </div>
                         <p class="poruka-datum"></p>
                     </div>
@@ -100,99 +81,68 @@
                         <button type="button" id="btnNazadDatum" name="button"
                             class="btn btn-warrning dugme">NAZAD</button>
                         <button type="button" id="btnDaljeDatum" name="button"
-                            class="btn btn-success dugme">NASTAVI</button>
+                            class="btn btn-success dugme ">NASTAVI</button>
                     </div>
                 </form>
             </div>
 
             <div class="modal-soba flex-column">
                 <img class="logo-branch" src="./img/branch-logo-vista-blue.png" alt="Eko Hostel Branch Arandjelovac">
+                <p class="poruka"></p>
                 <h3>Izaberite sobu</h3>
                 <div class="izbor-soba">
-                    <select name="SobaC" id="izborSoba">
-                        <option value="Soba 'A'">Soba "A" sa dva kreveta</option>
-                        <option value="Soba 'A'">Soba "B" sa cetiri kreveta</option>
-                        <option value="Soba 'A'">Soba "C" sa cetiri kreveta</option>
-                        <option value="Soba 'A'">Soba "D" sa osam kreveta</option>
+                    <select id="izborSoba">
+                        <option value=2>Soba "A" sa dva kreveta</option>
+                        <option value=4>Soba "B" sa cetiri kreveta</option>
+                        <option value=4>Soba "C" sa cetiri kreveta</option>
+                        <option value=8>Soba "D" sa osam kreveta</option>
                         <option disabled selected>Izaberi</option>
                     </select>
 
                     <input type="text" name="brKreveta" id="brKreveta" placeholder="Unesite broj krevete">
 
                 </div>
-                <button type="button" id="btnNazadRezervacija" name="button"
-                    class="btn btn-warrning dugme">NAZAD</button>
-                <button type="submit" id="btnPrikaziRezervaciju" class="btn btn-success dugme">PRIKAZI</button>
-
+                <div class="dugmici">
+                    <button type="button" id="btnNazadRezervacija" name="button"
+                        class="btn btn-warrning dugme">NAZAD</button>
+                    <button type="submit" id="btnPrikaziRezervaciju" class="btn btn-success dugme">PRIKAZI</button>
+                </div>
 
             </div>
 
             <div class="ispis-rezervacije flex-column">
+                <p class="porukaHvala">Hvala na poverenju.</p>
                 <div id="ispis-naslov"></div>
-                <div id="ispis" class="table-responsive">
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th>Kupac</th>
-                                <th>Telefon</th>
-                                <th>email</th>
-                            </tr>
-                        </thead>
-                        <tbody id="lista-korisnik"></tbody>
 
-                    </table>
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th>Datum prijave</th>
-                                <th>Datum Odjave</th>
-                                <th>Soba</th>
-                                <th>Broj Kreveta</th>
-                            </tr>
-                        </thead>
-                        <tbody id="lista-rezervacija"></tbody>
-                    </table>
-
-
-
-
-                    <!-- <form action="https://formspree.io/slavkov.mob@gmail.com" method="POST">
-                        <input name="ime" id="slanjeIme">
-                        <input name="telefon" id="slanjePrezime">
-                        <input name="email" id="slanjeEmail">
-                        <button type="submit" id="btnPosalji">Posalji</button>
-                    </form> -->
-
+                <div id="ispis">
+                    <div id="lista-korisnik" class="prikaz-r">
+                        <div class="prikaz-n">
+                            <span>Ime:</span>
+                            <span>Telefon:</span>
+                            <span>Email:</span>
+                            <span>Datum prijave:</span>
+                            <span>Datum Odjave:</span>
+                            <span>Izabrana soba:</span>
+                            <span>Broj kreveta:</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="btn-potvrda-rezervacije">
-                    <button type="button" name="button" id="btnOtkazi" class="btn btn-danger">OTKAZI</button>
+                    <button type="button" name="button" id="btnOtkazi" class="btn btn-danger">OTKAŽI</button>
                     <button type="submit" value="POTVRDI" id="btnPotvrdi" class="btn btn-success dugme">POTVRDI</button>
                 </div>
-
             </div>
-
-
         </div>
-
-
-
-
-
-
-
-
         <div class="levo-container"></div>
-
-
-
-
         <footer>
             <div class="footer-box-1">
                 <h3>Društvene mreže</h3>
                 <div class="ikonice">
-                    <a target="_blank" href="https://www.facebook.com/branchecohostel/"><i class="fa fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/hostelbranch/?hl=sr"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/branchecohostel/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/hostelbranch/?hl=sr"><i
+                            class="fa fa-instagram"></i></a>
                 </div>
             </div>
             <img class="img-footer" src="./img/branch-logo-vista-blue.png" alt="">
@@ -205,12 +155,16 @@
                 </div>
             </div>
         </footer>
-
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="./js/rezervacija.js"></script>
-    <script src="./js/rezervacija-modal.js"></script>
+    <script src="./js/rezervacija-validacija.js"></script>
+
 </body>
 
 </html>

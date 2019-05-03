@@ -1,31 +1,29 @@
-
 .main-container {
-    
     grid-template-rows: 50px auto auto;
     grid-template-areas: "n n n n n n n n n" "g g g g g g g g g" "f f f f f f f f f"
 }
 
-nav{
+nav {
     grid-area: n;
 }
 
-footer{
-grid-area: f;
+footer {
+    grid-area: f;
 }
-.galerija-container{
+
+.galerija-container {
     grid-area: g;
-    /* max-width: 769px; */
     margin: auto;
     border: 3px solid #fff;
     background: #fff;
 }
-.glavna-slika{
+
+.glavna-slika {
     margin-bottom: 10px;
 }
 
-.glavna-slika img, 
-.slike img{
-width: 100%;
+.glavna-slika img, .slike img {
+    width: 100%;
 }
 
 .slike {
@@ -34,17 +32,12 @@ width: 100%;
     grid-gap: 5px;
 }
 
-@media screen and (min-width:769px) { 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-    .galerija-container{
+@media screen and (min-width:769px) {
+    
+    .galerija-container {
         max-width: 900px;
-    
     }
-
     .slike {
-    
         grid-template-columns: repeat(4, 1fr);
-       
     }
 }
-
